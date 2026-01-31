@@ -37,6 +37,9 @@ async function initGame() {
   await loadSong(currentSongIndex);
 }
 
+// 페이지 로드 시 바로 초기화
+initGame();
+
 async function loadSong(index: number) {
   const song = SONGS[index];
   try {
