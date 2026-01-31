@@ -1,0 +1,94 @@
+{
+  "version": "1.0",
+  "meta": {
+    "title": "Hold Legend",
+    "artist": "For Bro",
+    "bpm": 130,
+    "offset": 0,
+    "difficulty": "HARD",
+    "level": 8,
+    "audioFile": ""
+  },
+  "notes": [
+    { "time": 1500, "lane": 0, "type": "hold", "duration": 1000 },
+    { "time": 1750, "lane": 1, "type": "hold", "duration": 750 },
+    { "time": 2000, "lane": 2, "type": "hold", "duration": 500 },
+
+    { "time": 3000, "lane": 3, "type": "hold", "duration": 1000 },
+    { "time": 3250, "lane": 2, "type": "hold", "duration": 750 },
+    { "time": 3500, "lane": 1, "type": "hold", "duration": 500 },
+
+    { "time": 4500, "lane": 0, "type": "hold", "duration": 2000 },
+    { "time": 4750, "lane": 1, "type": "tap" },
+    { "time": 5000, "lane": 2, "type": "tap" },
+    { "time": 5250, "lane": 3, "type": "tap" },
+    { "time": 5500, "lane": 2, "type": "tap" },
+    { "time": 5750, "lane": 1, "type": "tap" },
+    { "time": 6000, "lane": 2, "type": "tap" },
+    { "time": 6250, "lane": 3, "type": "tap" },
+
+    { "time": 7000, "lane": 3, "type": "hold", "duration": 2000 },
+    { "time": 7250, "lane": 2, "type": "tap" },
+    { "time": 7500, "lane": 1, "type": "tap" },
+    { "time": 7750, "lane": 0, "type": "tap" },
+    { "time": 8000, "lane": 1, "type": "tap" },
+    { "time": 8250, "lane": 2, "type": "tap" },
+    { "time": 8500, "lane": 1, "type": "tap" },
+    { "time": 8750, "lane": 0, "type": "tap" },
+
+    { "time": 9500, "lane": 0, "type": "hold", "duration": 1500 },
+    { "time": 9500, "lane": 3, "type": "hold", "duration": 1500 },
+    { "time": 9750, "lane": 1, "type": "tap" },
+    { "time": 10000, "lane": 2, "type": "tap" },
+    { "time": 10250, "lane": 1, "type": "tap" },
+    { "time": 10500, "lane": 2, "type": "tap" },
+    { "time": 10750, "lane": 1, "type": "tap" },
+
+    { "time": 11500, "lane": 1, "type": "hold", "duration": 1500 },
+    { "time": 11500, "lane": 2, "type": "hold", "duration": 1500 },
+    { "time": 11750, "lane": 0, "type": "tap" },
+    { "time": 12000, "lane": 3, "type": "tap" },
+    { "time": 12250, "lane": 0, "type": "tap" },
+    { "time": 12500, "lane": 3, "type": "tap" },
+    { "time": 12750, "lane": 0, "type": "tap" },
+
+    { "time": 13500, "lane": 0, "type": "hold", "duration": 1000 },
+    { "time": 13750, "lane": 1, "type": "hold", "duration": 1000 },
+    { "time": 14000, "lane": 2, "type": "hold", "duration": 1000 },
+    { "time": 14250, "lane": 3, "type": "hold", "duration": 1000 },
+
+    { "time": 15500, "lane": 3, "type": "hold", "duration": 1000 },
+    { "time": 15750, "lane": 2, "type": "hold", "duration": 1000 },
+    { "time": 16000, "lane": 1, "type": "hold", "duration": 1000 },
+    { "time": 16250, "lane": 0, "type": "hold", "duration": 1000 },
+
+    { "time": 17500, "lane": 0, "type": "hold", "duration": 2500 },
+    { "time": 17750, "lane": 3, "type": "hold", "duration": 2000 },
+    { "time": 18000, "lane": 1, "type": "tap" },
+    { "time": 18250, "lane": 2, "type": "tap" },
+    { "time": 18500, "lane": 1, "type": "tap" },
+    { "time": 18750, "lane": 2, "type": "tap" },
+    { "time": 19000, "lane": 1, "type": "tap" },
+    { "time": 19250, "lane": 2, "type": "tap" },
+    { "time": 19500, "lane": 1, "type": "tap" },
+
+    { "time": 20500, "lane": 0, "type": "hold", "duration": 500 },
+    { "time": 20500, "lane": 1, "type": "hold", "duration": 500 },
+    { "time": 21250, "lane": 2, "type": "hold", "duration": 500 },
+    { "time": 21250, "lane": 3, "type": "hold", "duration": 500 },
+    { "time": 22000, "lane": 0, "type": "hold", "duration": 500 },
+    { "time": 22000, "lane": 1, "type": "hold", "duration": 500 },
+    { "time": 22750, "lane": 2, "type": "hold", "duration": 500 },
+    { "time": 22750, "lane": 3, "type": "hold", "duration": 500 },
+
+    { "time": 23500, "lane": 0, "type": "hold", "duration": 3000 },
+    { "time": 23750, "lane": 1, "type": "hold", "duration": 2500 },
+    { "time": 24000, "lane": 2, "type": "hold", "duration": 2000 },
+    { "time": 24250, "lane": 3, "type": "hold", "duration": 1500 },
+
+    { "time": 27000, "lane": 0, "type": "hold", "duration": 1500 },
+    { "time": 27000, "lane": 1, "type": "hold", "duration": 1500 },
+    { "time": 27000, "lane": 2, "type": "hold", "duration": 1500 },
+    { "time": 27000, "lane": 3, "type": "hold", "duration": 1500 }
+  ]
+}
