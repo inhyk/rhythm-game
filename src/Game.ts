@@ -43,9 +43,10 @@ export class Game {
     );
   }
 
+  private audioInitialized = false;
+
   async init(): Promise<void> {
     await this.renderer.init();
-    await this.audioManager.init();
     this.inputManager.init();
 
     // Set up input callbacks
@@ -54,6 +55,14 @@ export class Game {
 
     this._state = 'ready';
     console.log('Game initialized');
+  }
+
+  // 오디오는 사용자 상호작용 후에 초기화
+  async initAudio(): Promise<void> {
+    if (this.audioInitialized) return;
+    this.audioInitialized = true;
+    await this.audioManager.init();
+    console.log('Audio initialized');
   }
 
   async loadChart(chartUrl: string, audioUrl?: string): Promise<void> {
@@ -87,11 +96,14 @@ export class Game {
     }
   }
 
-  start(): void {
+  async start(): Promise<void> {
     if (this._state !== 'ready' && this._state !== 'paused') {
       console.warn('Cannot start game in current state:', this._state);
       return;
     }
+
+    // 첫 시작 시 오디오 초기화 (사용자 상호작용 필요)
+    await this.initAudio();
 
     this._state = 'playing';
     this.renderer.hideMainScreen();

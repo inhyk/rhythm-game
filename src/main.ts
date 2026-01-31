@@ -26,15 +26,18 @@ let currentSongIndex = 0;
 
 const game = new Game();
 window.game = game;
-let initialized = false;
+let initPromise: Promise<void> | null = null;
 
 async function initGame() {
-  if (initialized) return;
-  initialized = true;
+  if (initPromise) return initPromise;
 
-  console.log('Initializing game...');
-  await game.init();
-  await loadSong(currentSongIndex);
+  initPromise = (async () => {
+    console.log('Initializing game...');
+    await game.init();
+    await loadSong(currentSongIndex);
+  })();
+
+  return initPromise;
 }
 
 // 페이지 로드 시 바로 초기화
@@ -55,14 +58,12 @@ window.addEventListener('keydown', async (e) => {
   if (e.code === 'Space') {
     e.preventDefault();
 
-    // Initialize on first interaction
-    if (!initialized) {
-      await initGame();
-    }
+    // 초기화 완료 대기
+    await initGame();
 
     switch (game.state) {
       case 'ready':
-        game.start();
+        await game.start();
         break;
       case 'playing':
         game.pause();
@@ -81,16 +82,15 @@ window.addEventListener('keydown', async (e) => {
     game.reset();
   }
 
-  // Number keys 1-4 to select song (only when not playing)
-  if (game.state === 'ready' || game.state === 'ended' || !initialized) {
+  // Number keys 1-6 to select song (only when not playing)
+  if (game.state === 'ready' || game.state === 'ended') {
     const keyNum = parseInt(e.key);
     if (keyNum >= 1 && keyNum <= SONGS.length) {
       e.preventDefault();
       currentSongIndex = keyNum - 1;
-      if (initialized) {
-        await loadSong(currentSongIndex);
-        console.log(`Selected: ${SONGS[currentSongIndex].name}`);
-      }
+      await initGame();
+      await loadSong(currentSongIndex);
+      console.log(`Selected: ${SONGS[currentSongIndex].name}`);
     }
   }
 });
